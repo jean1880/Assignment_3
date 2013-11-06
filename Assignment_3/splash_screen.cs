@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assignment_3
 {
-    public partial class Form1 : Form
+    public partial class splash_screen : Form
     {
-        public Form1()
+        public splash_screen()
         {
             InitializeComponent();
         }
