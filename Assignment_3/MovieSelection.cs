@@ -13,7 +13,8 @@ namespace Assignment_3
 {
     public partial class MovieSelection1 : Form
     {
-        splash_screen splashScreen;
+        private bool firstLoad = true; // first load indicator for splashcreen display
+        private splash_screen splashScreen;
         private XmlDocument doc = new XmlDocument(); // Variable to store xml document into
         private String[] titleList, descriptionList, imageList, genreList; // String array variables to hold information about each movie
         private Dictionary<string, decimal> costList = new Dictionary<string, decimal> { 
@@ -44,13 +45,15 @@ namespace Assignment_3
             genreList = new String[xList.Count]; // set array length to node count
 
             int i = 0; // initialise counter for iterator
-            foreach (XmlElement item in xList)
+
+            foreach (XmlElement item in xList)// Loop through the array of xml node list
             {
-                foreach (XmlElement element in item.ChildNodes)
+                foreach (XmlElement element in item.ChildNodes) // loop through the child nodes of the xList
                 {
                     String value = element.InnerText;
                     String title = element.Name;
 
+                    // Identify data type and assign its value to the appropriate array
                     if (title == "title")
                     {
                         titleList[i] = value;
@@ -67,16 +70,18 @@ namespace Assignment_3
                     {
                         genreList[i] = value;
                     }
-                }
+                }// end child node loop
                 i++;
-            }            
+            }// end xList loop
         }
 
+        /*
+         * On loading of the form, set timer for splash screen close and hide this form until splash screen is closed
+         */
         private void MovieSelection_Load(object sender, EventArgs e)
         {
             movieList.DataSource = titleList;
             splashTimer.Enabled = true;
-            this.Hide();
         }
 
         private void movie_selection(object sender, EventArgs e)
@@ -84,10 +89,13 @@ namespace Assignment_3
             int i = movieList.SelectedIndex; // variable to store the index value of the selected movie
             decimal cost; // variable to store cost
 
-            moviePicture.Load(imageList[i]);
+            // Set labels from loaded list index
+            moviePicture.Image = Properties.Resources.loader;
+            moviePicture.LoadAsync(imageList[i]);            
             movieLabel.Text     = titleList[i];
             categoryLabel.Text  = genreList[i];
 
+            // Get the cost of the movie bassed on the genre from the costList dictionary
             if (costList.TryGetValue(genreList[i], out cost))
             {
                 costLabel.Text = cost.ToString("C");
@@ -105,6 +113,15 @@ namespace Assignment_3
             // Call splashscreen close command
             this.splashScreen.Close();
             this.Show();
+        }
+
+        private void first_run(object sender, EventArgs e)
+        {
+            if (firstLoad)
+            {
+                this.Hide();
+                this.firstLoad = false;
+            }
         }
 
     }

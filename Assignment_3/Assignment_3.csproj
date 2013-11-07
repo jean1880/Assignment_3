@@ -109,11 +109,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
-    <None Include="Resources\the_dilemma.jpg" />
     <None Include="Resources\logo.ico" />
-    <Content Include="Resources\moviesList.xml" />
-    <None Include="Resources\the_green_hornet_movie_poster_02.jpg" />
-    <None Include="Resources\season_of_the_witch_movie_poster_01.jpg" />
+    <None Include="Resources\loader.gif" />
+    <Content Include="Resources\moviesList.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>

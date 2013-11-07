@@ -144,6 +144,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza!";
             this.Load += new System.EventHandler(this.MovieSelection_Load);
+            this.Shown += new System.EventHandler(this.first_run);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePicture)).EndInit();
