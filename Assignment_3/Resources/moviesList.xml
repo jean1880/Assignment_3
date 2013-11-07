@@ -4,12 +4,48 @@
     <title>Season of The Witch</title>
     <genre>Sci-Fi</genre>
     <description>14th-century knights transport a suspected witch to a monastery, where monks deduce her powers could be the source of the Black Plague.</description>
-    <image>season_of_the_witch_movie_poster_01.jpg</image>
+    <image>http://www.impawards.com/2011/posters/season_of_the_witch_xlg.jpg</image>
   </movie>
   <movie>
     <title>The Green Hornet</title>
-    <genre>Sci-Fi</genre>
+    <genre>Action</genre>
     <description>Following the death of his father, Britt Reid, heir to his father's large company, teams up with his late dad's assistant Kato to become a masked crime fighting team.</description>
-    <image>season_of_the_witch_movie_poster_01.jpg</image>
+    <image>http://www.impawards.com/2011/posters/green_hornet_ver3_xlg.jpg</image>
+  </movie>
+  <movie>
+    <title>The Dilemma</title>
+    <genre>Comedy</genre>
+    <description>A man discovers that his best friend's wife is having an affair.</description>
+    <image>http://www.impawards.com/2011/posters/dilemma_xlg.jpg</image>
+  </movie>
+  <movie>
+    <title>Death Race 2</title>
+    <genre>Action</genre>
+    <description>Explores the origins of the first "Frankenstein" car driver, Carl "Luke" Lucas, who died in a race at the beginning of the first film.</description>
+    <image>http://iwatchmike.com/wp-content/uploads/2011/01/death-race-2.jpg</image>
+  </movie>
+  <movie>
+    <title>The Company Men</title>
+    <genre>Drama</genre>
+    <description>The story centers on a year in the life of three men trying to survive a round of corporate downsizing at a major company - and how that affects them, their families, and their communities.</description>
+    <image>http://www.impawards.com/2010/posters/company_men_ver2_xlg.jpg</image>
+  </movie>
+  <movie>
+    <title>No Strings Attached</title>
+    <genre>Comedy</genre>
+    <description>A guy and girl try to keep their relationship strictly physical, but it's not long before they learn that they want something more.</description>
+    <image>http://www.impawards.com/2011/posters/no_strings_attached_xlg.jpg</image>
+  </movie>
+  <movie>
+    <title>The Way Back</title>
+    <genre>Drama</genre>
+    <description>Siberian gulag escapees walk 4000 miles overland to freedom in India.</description>
+    <image>http://www.wannagotothemovies.com/wp-content/uploads/2012/03/1-Poster7.jpg</image>
+  </movie>
+  <movie>
+    <title>The Mechanic</title>
+    <genre>Action</genre>
+    <description>Follows an elite hit man as he teaches his trade to an apprentice who has a connection to one of his previous victims.</description>
+    <image>http://www.impawards.com/2011/posters/mechanic_ver2_xlg.jpg</image>
   </movie>
 </movielist>
