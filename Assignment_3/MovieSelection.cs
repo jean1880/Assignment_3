@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace Assignment_3
 {
-    public partial class MovieSelection : Form
+    public partial class MovieSelection1 : Form
     {
         splash_screen splashScreen;
         private XmlDocument doc = new XmlDocument(); // Variable to store xml document into
@@ -27,10 +27,9 @@ namespace Assignment_3
             { "New Releases", 4.99m } 
         }; // Dictionary list of movie types and their asociated costs
 
-        public MovieSelection(splash_screen splashScreen)
+        public MovieSelection1(splash_screen splashScreen)
         {
-            InitializeComponent();
-
+            InitializeComponent();           
             this.splashScreen = splashScreen; // pass the splashScreen
 
             // Load xml data file
@@ -76,9 +75,8 @@ namespace Assignment_3
         private void MovieSelection_Load(object sender, EventArgs e)
         {
             movieList.DataSource = titleList;
-
-            // Call splashscreen close command
-            this.splashScreen.Close();
+            splashTimer.Enabled = true;
+            this.Hide();
         }
 
         private void movie_selection(object sender, EventArgs e)
@@ -100,6 +98,13 @@ namespace Assignment_3
                 Application.Exit();
             }
             descriptionBox.Text = descriptionList[i];            
+        }
+
+        private void splashTimer_Tick(object sender, EventArgs e)
+        {
+            // Call splashscreen close command
+            this.splashScreen.Close();
+            this.Show();
         }
 
     }

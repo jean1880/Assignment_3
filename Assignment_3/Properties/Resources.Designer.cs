@@ -91,42 +91,12 @@ namespace Assignment_3.Properties {
         ///  &lt;/movie&gt;
         ///  &lt;movie&gt;
         ///    &lt;title&gt;The Green Hornet&lt;/title&gt;
-        ///    &lt;genre&gt;Sci-Fi&lt;/genre&gt;
+        ///    &lt;genre&gt;Action&lt;/genre&gt;
         ///    &lt;description&gt;Following the death of [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string moviesList {
             get {
                 return ResourceManager.GetString("moviesList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap season_of_the_witch_movie_poster_01 {
-            get {
-                object obj = ResourceManager.GetObject("season_of_the_witch_movie_poster_01", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap the_dilemma {
-            get {
-                object obj = ResourceManager.GetObject("the_dilemma", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap the_green_hornet_movie_poster_02 {
-            get {
-                object obj = ResourceManager.GetObject("the_green_hornet_movie_poster_02", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

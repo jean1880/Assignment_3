@@ -1,6 +1,6 @@
 ﻿namespace Assignment_3
 {
-    partial class MovieSelection
+    partial class MovieSelection1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovieSelection));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovieSelection1));
             this.movieList = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.costLabel = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.movieLabel = new System.Windows.Forms.Label();
             this.descriptionBox = new System.Windows.Forms.TextBox();
             this.moviePicture = new System.Windows.Forms.PictureBox();
+            this.splashTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePicture)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +45,7 @@
             // movieList
             // 
             this.movieList.FormattingEnabled = true;
+            this.movieList.HorizontalScrollbar = true;
             this.movieList.Location = new System.Drawing.Point(12, 6);
             this.movieList.Name = "movieList";
             this.movieList.Size = new System.Drawing.Size(153, 329);
@@ -121,7 +124,12 @@
             this.moviePicture.TabIndex = 0;
             this.moviePicture.TabStop = false;
             // 
-            // MovieSelection
+            // splashTimer
+            // 
+            this.splashTimer.Interval = 2000;
+            this.splashTimer.Tick += new System.EventHandler(this.splashTimer_Tick);
+            // 
+            // MovieSelection1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +140,7 @@
             this.Controls.Add(this.movieList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MovieSelection";
+            this.Name = "MovieSelection1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza!";
             this.Load += new System.EventHandler(this.MovieSelection_Load);
@@ -153,6 +161,7 @@
         private System.Windows.Forms.Label movieLabel;
         private System.Windows.Forms.Label categoryLabel;
         private System.Windows.Forms.Label costLabel;
+        private System.Windows.Forms.Timer splashTimer;
     }
 }
 

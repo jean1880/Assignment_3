@@ -18,7 +18,7 @@ namespace Assignment_3
             Application.SetCompatibleTextRenderingDefault(false);
             splash_screen splashScreen = new splash_screen();
             splashScreen.Show();
-            Application.Run(new MovieSelection(splashScreen));
+            Application.Run(new MovieSelection1(splashScreen));
         }
     }
 }
