@@ -17,7 +17,8 @@ namespace Assignment_3
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             splash_screen splashScreen = new splash_screen();
-            MovieSelection1 movieSelection = new MovieSelection1(splashScreen);
+            OrderForm orderForm = new OrderForm();
+            MovieSelection movieSelection = new MovieSelection(splashScreen,orderForm);
             splashScreen.Show();
             Application.Run(movieSelection);
         }

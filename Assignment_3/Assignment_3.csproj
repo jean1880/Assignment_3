@@ -64,6 +64,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paymentForm.Designer.cs">
+      <DependentUpon>paymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovieSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +96,23 @@
     <Compile Include="splash_screen.Designer.cs">
       <DependentUpon>splash_screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stream.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stream.Designer.cs">
+      <DependentUpon>Stream.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MovieSelection.resx">
       <DependentUpon>MovieSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paymentForm.resx">
+      <DependentUpon>paymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="splash_screen.resx">
       <DependentUpon>splash_screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stream.resx">
+      <DependentUpon>Stream.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,8 +145,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\visa-logo.jpg" />
     <None Include="Resources\logo.ico" />
     <None Include="Resources\loader.gif" />
+    <None Include="Resources\americanexpress.jpg" />
+    <None Include="Resources\mastercard.jpg" />
     <Content Include="Resources\moviesList.xml">
       <SubType>Designer</SubType>
     </Content>

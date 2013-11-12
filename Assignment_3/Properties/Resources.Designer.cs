@@ -63,6 +63,16 @@ namespace Assignment_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap americanexpress {
+            get {
+                object obj = ResourceManager.GetObject("americanexpress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loader {
             get {
                 object obj = ResourceManager.GetObject("loader", resourceCulture);
@@ -91,6 +101,16 @@ namespace Assignment_3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mastercard {
+            get {
+                object obj = ResourceManager.GetObject("mastercard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;movielist&gt;
         ///  &lt;movie&gt;
@@ -98,16 +118,25 @@ namespace Assignment_3.Properties {
         ///    &lt;genre&gt;Sci-Fi&lt;/genre&gt;
         ///    &lt;year&gt;2011&lt;/year&gt;
         ///    &lt;description&gt;14th-century knights transport a suspected witch to a monastery, where monks deduce her powers could be the source of the Black Plague.&lt;/description&gt;
-        ///    &lt;image&gt;http://www.impawards.com/2011/posters/season_of_the_witch_xlg.jpg&lt;/image&gt;
+        ///    &lt;image&gt;http://webdesign4.georgianc.on.ca/~200176338/DATA/RAD_Images/season_of_the_witch_xlg.jpg&lt;/image&gt;
         ///  &lt;/movie&gt;
         ///  &lt;movie&gt;
         ///    &lt;title&gt;The Green Hornet&lt;/title&gt;
-        ///    &lt;genre&gt;Action&lt;/genre&gt;
-        ///    &lt;year&gt;2011&lt;/ [rest of string was truncated]&quot;;.
+        ///    &lt;genre&gt;Action&lt;/g [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string moviesList {
             get {
                 return ResourceManager.GetString("moviesList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visa_logo {
+            get {
+                object obj = ResourceManager.GetObject("visa_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
