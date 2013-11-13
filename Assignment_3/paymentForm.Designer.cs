@@ -49,6 +49,7 @@
             // 
             // paymentComboBox
             // 
+            this.paymentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.paymentComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentComboBox.FormattingEnabled = true;
             this.paymentComboBox.Location = new System.Drawing.Point(286, 15);
@@ -180,10 +181,11 @@
             this.expiryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.expiryDate.Location = new System.Drawing.Point(229, 154);
+            this.expiryDate.MinDate = new System.DateTime(1969, 1, 1, 0, 0, 0, 0);
             this.expiryDate.Name = "expiryDate";
             this.expiryDate.Size = new System.Drawing.Size(70, 26);
             this.expiryDate.TabIndex = 26;
-            this.expiryDate.Value = new System.DateTime(2013, 11, 8, 14, 59, 38, 0);
+            this.expiryDate.Value = new System.DateTime(2013, 11, 12, 0, 0, 0, 0);
             // 
             // cancelButton
             // 

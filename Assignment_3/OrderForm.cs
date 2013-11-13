@@ -16,6 +16,7 @@ namespace Assignment_3
     /// <author>Jean-Luc Desroches</author>
     public partial class OrderForm : Form
     {
+        private List<String> purchasedMovies = new List<string>();
         private MovieSelection movieForm;
         private Stream movieStream = new Stream();
         private paymentForm payment_form = new paymentForm();
@@ -30,6 +31,16 @@ namespace Assignment_3
         public OrderForm()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Create order form with purchased movies list
+        /// </summary>
+        /// <param name="purchasedMovies"></param>
+        public OrderForm(List<String> purchasedMovies)
+        {
+            InitializeComponent();
+            this.purchasedMovies = purchasedMovies;
         }
 
         /// <summary>
@@ -123,7 +134,17 @@ namespace Assignment_3
         {
             if (payment_form.checkSuccess())
             {
-                streamButton.Enabled = true;                
+                CreatePurchaseForm();
+                purchasedMovies.Add(this.title);
+                streamButton.Enabled = true;        
+            }
+            else if (checkMoviePurchased())
+            {
+                streamButton.Enabled = true;
+            }
+            else
+            {
+                streamButton.Enabled = false;   
             }
         }
 
@@ -138,10 +159,30 @@ namespace Assignment_3
             aboutForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Open Streaming with selected movie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void streamButton_Click(object sender, EventArgs e)
         {
+            movieStream.initialize(new String[] { title, description, genre }, purchasedMovies);
             movieStream.Show();
             this.Hide();
+        }
+
+        public void setPurchasedMovies(List<String> purchasedMovies)
+        {
+            this.purchasedMovies = purchasedMovies;
+        }
+
+        private Boolean checkMoviePurchased()
+        {
+            if (purchasedMovies != null && purchasedMovies.Contains(title))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

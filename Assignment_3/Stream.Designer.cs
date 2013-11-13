@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stream));
             this.movieBox = new System.Windows.Forms.PictureBox();
             this.backControl = new System.Windows.Forms.PictureBox();
+            this.controlTimer = new System.Windows.Forms.Timer(this.components);
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.titleBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.movieBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backControl)).BeginInit();
+            this.titleBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // movieBox
@@ -53,6 +58,32 @@
             this.backControl.TabIndex = 1;
             this.backControl.TabStop = false;
             this.backControl.Visible = false;
+            this.backControl.Click += new System.EventHandler(this.backControl_Click);
+            // 
+            // controlTimer
+            // 
+            this.controlTimer.Interval = 1000;
+            this.controlTimer.Tick += new System.EventHandler(this.controlTimer_Tick);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(6, 18);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(405, 54);
+            this.titleLabel.TabIndex = 2;
+            this.titleLabel.Text = "movie title";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // titleBox
+            // 
+            this.titleBox.Controls.Add(this.titleLabel);
+            this.titleBox.Location = new System.Drawing.Point(201, -6);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.Size = new System.Drawing.Size(417, 87);
+            this.titleBox.TabIndex = 3;
+            this.titleBox.TabStop = false;
+            this.titleBox.Visible = false;
             // 
             // Stream
             // 
@@ -60,6 +91,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(752, 590);
+            this.Controls.Add(this.titleBox);
             this.Controls.Add(this.backControl);
             this.Controls.Add(this.movieBox);
             this.ForeColor = System.Drawing.Color.White;
@@ -68,9 +100,10 @@
             this.Text = "Movie Bananza!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_closing);
             this.Load += new System.EventHandler(this.Stream_Load);
-            this.MouseHover += new System.EventHandler(this.show_controls);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.show_controls);
             ((System.ComponentModel.ISupportInitialize)(this.movieBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backControl)).EndInit();
+            this.titleBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -79,5 +112,8 @@
 
         private System.Windows.Forms.PictureBox movieBox;
         private System.Windows.Forms.PictureBox backControl;
+        private System.Windows.Forms.Timer controlTimer;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.GroupBox titleBox;
     }
 }

@@ -12,13 +12,15 @@ using System.Xml;
 namespace Assignment_3
 {
     /// <summary>
-    /// Allows user to select the movie they wish to order
+    /// This form allows user to select the movie they wish to order
     /// </summary>
     /// <author>Jean-Luc Desroches</author>
     public partial class MovieSelection : Form
     {
         private splash_screen splashScreen; // Splash screen
         private OrderForm orderForm; // Next form
+        private List<String> purchasedMovies = new List<string>();
+        
         private int prev_movieSelection = -1; // variable to store the previous selected image
         private decimal cost; // variable to store cost
 
@@ -37,6 +39,18 @@ namespace Assignment_3
         }; // Dictionary list of movie types and their asociated costs
 
         /// <summary>
+        /// Basic Constructor, to be used with no splash screen
+        /// </summary>
+        public MovieSelection()
+        {
+            InitializeComponent();
+
+            this.orderForm = new OrderForm();
+
+            loadXML();
+        }
+
+        /// <summary>
         /// Main constructor takes the splash screen and next form in construction for preperation of display
         /// </summary>
         /// <param name="splashScreen"></param>
@@ -48,6 +62,16 @@ namespace Assignment_3
             this.splashScreen = splashScreen; // pass the splashScreen
             this.orderForm = orderForm; // Pass the next form to the main form
 
+            loadXML();
+            
+            splashTimer.Enabled = true;
+        }
+        
+        /// <summary>
+        /// Loads data from the xml resource file into movie data variables
+        /// </summary>
+        private void loadXML()
+        {
             // Load xml data file
             doc.LoadXml(Properties.Resources.moviesList); // load the xml file intot her doc variable
             XmlNodeList xList = doc.SelectNodes("/movielist/movie"); // Create nodelist of movies from xml file
@@ -85,10 +109,10 @@ namespace Assignment_3
                 }// end child node loop
                 i++;
             }// end xList loop
-            moviePicture.InitialImage = Properties.Resources.loader;
 
-            movieList.DataSource = titleList;
-            splashTimer.Enabled = true;
+            moviePicture.InitialImage = Properties.Resources.loader; // set initial image to loader in the even that system takes a while to display the movie image
+
+            movieList.DataSource = titleList; // load the movie list from the array of movie titles
         }
 
         /// <summary>
@@ -129,6 +153,15 @@ namespace Assignment_3
         }
 
         /// <summary>
+        /// Set the purchased movies list
+        /// </summary>
+        /// <param name="purchasedMovies">List of movies previously purchased in the form</param>
+        public void setPurchasedMovies(List<String> purchasedMovies)
+        {
+            this.purchasedMovies = purchasedMovies;
+        }
+
+        /// <summary>
         /// Ticker to cloase the splash screen
         /// </summary>
         /// <param name="sender"></param>
@@ -153,6 +186,13 @@ namespace Assignment_3
             this.Hide();
             orderForm.passForm(this);
             orderForm.passSelection(tempVar, cost, moviePicture.Image);
+            if (purchasedMovies != null && purchasedMovies.Count > 0)
+            {
+                if(purchasedMovies.Contains(titleList[i]))
+                {
+                    orderForm.setPurchasedMovies(purchasedMovies);
+                }
+            }
             orderForm.Show();
         }
 

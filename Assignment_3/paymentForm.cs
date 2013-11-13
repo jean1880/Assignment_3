@@ -137,8 +137,7 @@ namespace Assignment_3
 
         private void cancel_click(object sender, EventArgs e)
         {
-            prevForm.Show();
-            prevForm.CreatePurchaseForm();
+            Application.Exit();
         }
     }
 

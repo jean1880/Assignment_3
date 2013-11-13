@@ -16,6 +16,9 @@ namespace Assignment_3
     /// <author>Jean-Luc Desroches</author>
     public partial class Stream : Form
     {
+        private String title, description, genre;
+        private List<String> purchasedMovies;
+
         /// <summary>
         /// Main Constructor
         /// </summary>
@@ -39,7 +42,7 @@ namespace Assignment_3
 
         private void Stream_Load(object sender, EventArgs e)
         {
-
+            titleLabel.Text = title;
         }
 
         /// <summary>
@@ -47,9 +50,56 @@ namespace Assignment_3
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void show_controls(object sender, EventArgs e)
+        private void show_controls(object sender, MouseEventArgs e)
         {
             backControl.Visible = true;
+            titleBox.Visible = true;
+            controlTimer.Enabled = true;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void controlTimer_Tick(object sender, EventArgs e)
+        {
+            backControl.Visible = false;
+            titleBox.Visible = false;
+            controlTimer.Enabled = false;
+        }
+
+        /// <summary>
+        /// Clicking the back button will close the current application thread and reopen the movie selection form on a seperate thread
+        /// This will ensure a clean exit of all current forms and variable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void backControl_Click(object sender, EventArgs e)
+        {
+            System.Threading.ThreadStart main = new System.Threading.ThreadStart(openNewApp);
+            System.Threading.Thread sys2 = new System.Threading.Thread(main);
+            sys2.Start();
+            Application.ExitThread();
+        }
+
+        /// <summary>
+        /// Open new movie selection
+        /// </summary>
+        private void openNewApp()
+        {
+            MovieSelection movieSelection = new MovieSelection();
+            movieSelection.setPurchasedMovies(purchasedMovies);
+            Application.Run(movieSelection);
+        }
+
+        public void initialize(String[] movieInfo, List<String> purchasedMovies)
+        {
+            this.title = movieInfo[0];
+            this.description = movieInfo[1];
+            this.genre = movieInfo[2];
+
+            this.purchasedMovies = purchasedMovies;
         }
     }
 }
