@@ -48,8 +48,7 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void form_closing(object sender, FormClosingEventArgs e)
         {
-            prevForm.Show();
-            prevForm.CreatePurchaseForm();
+            cancel_click(sender, e);
         }
 
         /// <summary>
@@ -89,6 +88,7 @@ namespace Assignment_3
                             this.success = true;
                             this.Hide();
                             prevForm.Show();
+                            MessageBox.Show("Payment processed successfully, enjoy your movie!", "Payment Success");
                         }
                         else
                         {
@@ -133,6 +133,12 @@ namespace Assignment_3
                 paymentPicture.Image = Properties.Resources.americanexpress;
                 creditRegExp = "^3[47][0-9]{13}$";
             }            
+        }
+
+        private void cancel_click(object sender, EventArgs e)
+        {
+            prevForm.Show();
+            prevForm.CreatePurchaseForm();
         }
     }
 

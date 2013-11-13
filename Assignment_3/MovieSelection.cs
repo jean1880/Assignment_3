@@ -23,7 +23,8 @@ namespace Assignment_3
         private decimal cost; // variable to store cost
 
         private XmlDocument doc = new XmlDocument(); // Variable to store xml document into
-        private String[] titleList, descriptionList, imageList, genreList; // String array variables to hold information about each movie
+        private String[] titleList, descriptionList, genreList; // String array variables to hold information about each movie
+        private Image[] imageList;
         private Dictionary<string, decimal> costList = new Dictionary<string, decimal> { 
             { "Comedy"      , 1.99m }, 
             { "Sci-Fi"      , 2.99m }, 
@@ -52,7 +53,7 @@ namespace Assignment_3
             XmlNodeList xList = doc.SelectNodes("/movielist/movie"); // Create nodelist of movies from xml file
             titleList = new String[xList.Count]; // set array length to node count
             descriptionList = new String[xList.Count]; // set array length to node count
-            imageList = new String[xList.Count]; // set array length to node count
+            imageList = new Image[xList.Count]; // set array length to node count
             genreList = new String[xList.Count]; // set array length to node count
 
             int i = 0; // initialise counter for iterator
@@ -75,7 +76,7 @@ namespace Assignment_3
                     }
                     else if (title == "image")
                     {
-                        imageList[i] = value;
+                        imageList[i] = (Image)Properties.Resources.ResourceManager.GetObject(value);
                     }
                     else if (title == "genre")
                     {
@@ -84,6 +85,10 @@ namespace Assignment_3
                 }// end child node loop
                 i++;
             }// end xList loop
+            moviePicture.InitialImage = Properties.Resources.loader;
+
+            movieList.DataSource = titleList;
+            splashTimer.Enabled = true;
         }
 
         /// <summary>
@@ -93,8 +98,6 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void MovieSelection_Load(object sender, EventArgs e)
         {
-            movieList.DataSource = titleList;
-            splashTimer.Enabled = true;
         }
 
         /// <summary>
@@ -107,15 +110,9 @@ namespace Assignment_3
             int i = movieList.SelectedIndex; // variable to store the index value of the selected movie
             if (prev_movieSelection != i) // check if reivous photo, do nothing if same photo selected
             {
-                moviePicture.CancelAsync(); // cancel currently loading image
-
-               
-
                 // Set labels and image from loaded list index
-                moviePicture.Image = Properties.Resources.loader; // display loading gif to user
                 movieLabel.Text = titleList[i];
                 categoryLabel.Text = genreList[i];
-
                 // Get the cost of the movie bassed on the genre from the costList dictionary
                 if (costList.TryGetValue(genreList[i], out this.cost))
                 {
@@ -127,8 +124,7 @@ namespace Assignment_3
                     Application.Exit();
                 }
                 descriptionBox.Text = descriptionList[i];
-                moviePicture.LoadAsync(imageList[i]);
-                prev_movieSelection = i; // set the previous image to the current image
+                moviePicture.Image = imageList[i];
             }
         }
 
@@ -139,20 +135,10 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void splashTimer_Tick(object sender, EventArgs e)
         {
+            splashTimer.Enabled = false;
             // Call splashscreen close command
             this.splashScreen.Close();
-            this.Show();
-            splashTimer.Enabled = false;
-        }
-
-        /// <summary>
-        /// First time program is shown, immediately hid it to show splash screen
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void first_run(object sender, EventArgs e)
-        {
-            this.Hide();
+            this.Show();            
         }
 
         /// <summary>
@@ -163,10 +149,10 @@ namespace Assignment_3
         private void nextButton_Click(object sender, EventArgs e)
         {
             int i = movieList.SelectedIndex; // variable to store the index value of the selected movie
-
+            String[] tempVar = { titleList[i], genreList[i], descriptionList[i] };
             this.Hide();
             orderForm.passForm(this);
-            orderForm.passSelection(titleList[i], genreList[i],cost,descriptionList[i],moviePicture.Image);
+            orderForm.passSelection(tempVar, cost, moviePicture.Image);
             orderForm.Show();
         }
 
@@ -177,7 +163,7 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void form_Closing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            cancelToolStripMenuItem_Click(sender, e);
         }
 
         /// <summary>
@@ -189,6 +175,16 @@ namespace Assignment_3
         {
             About aboutForm = new About(); // About Form
             aboutForm.ShowDialog();
+        }
+
+        /// <summary>
+        /// Exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

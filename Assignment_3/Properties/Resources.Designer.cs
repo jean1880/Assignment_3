@@ -63,9 +63,129 @@ namespace Assignment_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_Poster7 {
+            get {
+                object obj = ResourceManager.GetObject("_1_Poster7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _31898 {
+            get {
+                object obj = ResourceManager.GetObject("_31898", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap americanexpress {
             get {
                 object obj = ResourceManager.GetObject("americanexpress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cedar_rapids_ver2_xlg {
+            get {
+                object obj = ResourceManager.GetObject("cedar_rapids_ver2_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap company_men_ver2_xlg {
+            get {
+                object obj = ResourceManager.GetObject("company_men_ver2_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap death_race_2 {
+            get {
+                object obj = ResourceManager.GetObject("death_race_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dilemma_xlg {
+            get {
+                object obj = ResourceManager.GetObject("dilemma_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footloose_ver2_xlg {
+            get {
+                object obj = ResourceManager.GetObject("footloose_ver2_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gnomeo_and_juliet_xlg {
+            get {
+                object obj = ResourceManager.GetObject("gnomeo_and_juliet_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap green_hornet_ver3_xlg {
+            get {
+                object obj = ResourceManager.GetObject("green_hornet_ver3_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap i_am_number_four_ver6_xlg {
+            get {
+                object obj = ResourceManager.GetObject("i_am_number_four_ver6_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap just_go_with_it_xlg {
+            get {
+                object obj = ResourceManager.GetObject("just_go_with_it_xlg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -111,6 +231,16 @@ namespace Assignment_3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mechanic_ver2_xlg {
+            get {
+                object obj = ResourceManager.GetObject("mechanic_ver2_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;movielist&gt;
         ///  &lt;movie&gt;
@@ -118,11 +248,13 @@ namespace Assignment_3.Properties {
         ///    &lt;genre&gt;Sci-Fi&lt;/genre&gt;
         ///    &lt;year&gt;2011&lt;/year&gt;
         ///    &lt;description&gt;14th-century knights transport a suspected witch to a monastery, where monks deduce her powers could be the source of the Black Plague.&lt;/description&gt;
-        ///    &lt;image&gt;http://webdesign4.georgianc.on.ca/~200176338/DATA/RAD_Images/season_of_the_witch_xlg.jpg&lt;/image&gt;
+        ///    &lt;image&gt;season_of_the_witch_xlg&lt;/image&gt;
         ///  &lt;/movie&gt;
         ///  &lt;movie&gt;
         ///    &lt;title&gt;The Green Hornet&lt;/title&gt;
-        ///    &lt;genre&gt;Action&lt;/g [rest of string was truncated]&quot;;.
+        ///    &lt;genre&gt;Action&lt;/genre&gt;
+        ///    &lt;year&gt;2011&lt;/year&gt;
+        ///    &lt;description&gt;Following the deat [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string moviesList {
             get {
@@ -133,9 +265,89 @@ namespace Assignment_3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap no_strings_attached_xlg {
+            get {
+                object obj = ResourceManager.GetObject("no_strings_attached_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap other_woman_xlg {
+            get {
+                object obj = ResourceManager.GetObject("other_woman_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap real_steel_ver2_xlg {
+            get {
+                object obj = ResourceManager.GetObject("real_steel_ver2_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rite_xlg {
+            get {
+                object obj = ResourceManager.GetObject("rite_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap roommate_xlg {
+            get {
+                object obj = ResourceManager.GetObject("roommate_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanctum_xlg {
+            get {
+                object obj = ResourceManager.GetObject("sanctum_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap season_of_the_witch_xlg {
+            get {
+                object obj = ResourceManager.GetObject("season_of_the_witch_xlg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap visa_logo {
             get {
                 object obj = ResourceManager.GetObject("visa_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waiting_for_forever_xlg {
+            get {
+                object obj = ResourceManager.GetObject("waiting_for_forever_xlg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -57,14 +57,14 @@ namespace Assignment_3
         /// <param name="cost"></param>
         /// <param name="description"></param>
         /// <param name="image"></param>
-        public void passSelection(string title, string genre, decimal cost, string description, Image image)
+        public void passSelection(String[] tempVar, decimal cost, Image image)
         {
             decimal taxTotal; // Variable to store calculated tax
 
             // Set variables
-            this.title = title;
-            this.genre = genre;
-            this.description = description;
+            this.title = tempVar[0];
+            this.genre = tempVar[1];
+            this.description = tempVar[2];
             this.cost = cost;
             this.image = image;
 
@@ -123,8 +123,7 @@ namespace Assignment_3
         {
             if (payment_form.checkSuccess())
             {
-                movieStream.Show();
-                this.Hide();
+                streamButton.Enabled = true;                
             }
         }
 
@@ -137,6 +136,12 @@ namespace Assignment_3
         {
             About aboutForm = new About(); // About Form
             aboutForm.ShowDialog();
+        }
+
+        private void streamButton_Click(object sender, EventArgs e)
+        {
+            movieStream.Show();
+            this.Hide();
         }
     }
 }

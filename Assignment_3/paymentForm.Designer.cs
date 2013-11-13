@@ -43,6 +43,7 @@
             this.CCVBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.expiryDate = new System.Windows.Forms.DateTimePicker();
+            this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.paymentPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,6 +185,16 @@
             this.expiryDate.TabIndex = 26;
             this.expiryDate.Value = new System.DateTime(2013, 11, 8, 14, 59, 38, 0);
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(401, 154);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 27;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancel_click);
+            // 
             // paymentForm
             // 
             this.AcceptButton = this.submitButton;
@@ -191,6 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(619, 193);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.expiryDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.CCVBox);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.TextBox CCVBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker expiryDate;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

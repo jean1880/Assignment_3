@@ -47,6 +47,7 @@
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.streamButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.moviePicture)).BeginInit();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,7 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(667, 557);
+            this.nextButton.Location = new System.Drawing.Point(586, 557);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 10;
@@ -224,9 +225,20 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // streamButton
+            // 
+            this.streamButton.Enabled = false;
+            this.streamButton.Location = new System.Drawing.Point(667, 557);
+            this.streamButton.Name = "streamButton";
+            this.streamButton.Size = new System.Drawing.Size(75, 23);
+            this.streamButton.TabIndex = 16;
+            this.streamButton.Text = "&Stream";
+            this.streamButton.UseVisualStyleBackColor = true;
+            this.streamButton.Click += new System.EventHandler(this.streamButton_Click);
             // 
             // OrderForm
             // 
@@ -235,6 +247,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CancelButton = this.backButton;
             this.ClientSize = new System.Drawing.Size(754, 592);
+            this.Controls.Add(this.streamButton);
             this.Controls.Add(this.mainMenu);
             this.Controls.Add(this.GSTOutputLabel);
             this.Controls.Add(this.taxLabel);
@@ -282,5 +295,6 @@
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button streamButton;
     }
 }

@@ -26,15 +26,6 @@ namespace Assignment_3
             movieBox.Image = Properties.Resources.loader; /// display loader gif while stream is 'prepared'
         }
         
-        /// <summary>
-        ///  output success message to the user
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void success_Output(object sender, EventArgs e)
-        {
-            MessageBox.Show("Payment processed successfully, enjoy your movie!", "Payment Success");
-        }
 
         /// <summary>
         /// On form close, exit entire application
@@ -44,6 +35,21 @@ namespace Assignment_3
         private void form_closing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Stream_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void show_controls(object sender, EventArgs e)
+        {
+            backControl.Visible = true;
         }
     }
 }

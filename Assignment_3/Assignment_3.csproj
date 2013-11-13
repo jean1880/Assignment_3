@@ -145,11 +145,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\waiting_for_forever_xlg.jpg" />
+    <None Include="Resources\season_of_the_witch_xlg.jpg" />
+    <None Include="Resources\sanctum_xlg.jpg" />
+    <None Include="Resources\roommate_xlg.jpg" />
+    <None Include="Resources\rite_xlg.jpg" />
+    <None Include="Resources\real_steel_ver2_xlg.jpg" />
+    <None Include="Resources\other_woman_xlg.jpg" />
+    <None Include="Resources\no_strings_attached_xlg.jpg" />
     <None Include="Resources\visa-logo.jpg" />
     <None Include="Resources\logo.ico" />
     <None Include="Resources\loader.gif" />
     <None Include="Resources\americanexpress.jpg" />
     <None Include="Resources\mastercard.jpg" />
+    <None Include="Resources\1-Poster7.jpg" />
+    <None Include="Resources\31898.jpg" />
+    <None Include="Resources\cedar_rapids_ver2_xlg.jpg" />
+    <None Include="Resources\company_men_ver2_xlg.jpg" />
+    <None Include="Resources\death-race-2.jpg" />
+    <None Include="Resources\dilemma_xlg.jpg" />
+    <None Include="Resources\footloose_ver2_xlg.jpg" />
+    <None Include="Resources\gnomeo_and_juliet_xlg.jpg" />
+    <None Include="Resources\green_hornet_ver3_xlg.jpg" />
+    <None Include="Resources\i_am_number_four_ver6_xlg.jpg" />
+    <None Include="Resources\just_go_with_it_xlg.jpg" />
+    <None Include="Resources\mechanic_ver2_xlg.jpg" />
+    <None Include="Resources\back.png" />
     <Content Include="Resources\moviesList.xml">
       <SubType>Designer</SubType>
     </Content>

@@ -121,6 +121,33 @@
   <data name="americanexpress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\americanexpress.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cedar_rapids_ver2_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cedar_rapids_ver2_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="company_men_ver2_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\company_men_ver2_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="death_race_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\death-race-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dilemma_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dilemma_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="footloose_ver2_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\footloose_ver2_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gnomeo_and_juliet_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gnomeo_and_juliet_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_hornet_ver3_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_hornet_ver3_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="i_am_number_four_ver6_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\i_am_number_four_ver6_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="just_go_with_it_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\just_go_with_it_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loader.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,10 +160,46 @@
   <data name="mastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mastercard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mechanic_ver2_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mechanic_ver2_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="moviesList" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moviesList.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="no_strings_attached_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no_strings_attached_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="other_woman_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\other_woman_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="real_steel_ver2_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\real_steel_ver2_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rite_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rite_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="roommate_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\roommate_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanctum_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanctum_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="season_of_the_witch_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\season_of_the_witch_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="visa_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\visa-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waiting_for_forever_xlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waiting_for_forever_xlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1_Poster7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1-Poster7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_31898" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\31898.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
