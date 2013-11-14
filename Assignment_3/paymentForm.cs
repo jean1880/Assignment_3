@@ -37,7 +37,7 @@ namespace Assignment_3
 
             // set form settings
             paymentComboBox.DataSource = paymentList;
-            expiryDate.CustomFormat = "MM/yy";
+            expiryDate.CustomFormat = "MM/YY";
             expiryDate.Format = DateTimePickerFormat.Custom;
         }
 
@@ -77,7 +77,7 @@ namespace Assignment_3
         private void submitButton_Click(object sender, EventArgs e)
         {
             int verificationTmp;
-            if (fNameBox.Text != "" && lNameBox.Text != "" && cardNumBox.Text != "" && CCVBox.Text != "") // ensure all fields are filled out on the form
+            if (!String.IsNullOrEmpty(fNameBox.Text) && !String.IsNullOrEmpty(lNameBox.Text) && !String.IsNullOrEmpty(cardNumBox.Text) && !String.IsNullOrEmpty(CCVBox.Text)) // ensure all fields are filled out on the form
             {
                 if (Regex.IsMatch(cardNumBox.Text, creditRegExp)) // verify the credit card from the regex method for the chosen credit type
                 {
@@ -135,6 +135,11 @@ namespace Assignment_3
             }            
         }
 
+        /// <summary>
+        /// Exits the application upon user cancel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancel_click(object sender, EventArgs e)
         {
             Application.Exit();

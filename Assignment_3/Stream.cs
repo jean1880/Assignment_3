@@ -26,7 +26,7 @@ namespace Assignment_3
         {
             InitializeComponent();
 
-            movieBox.Image = Properties.Resources.loader; /// display loader gif while stream is 'prepared'
+            movieBox.Image = Properties.Resources.loader; // display loader gif while stream is 'prepared'
         }
         
 
@@ -40,13 +40,18 @@ namespace Assignment_3
             Application.Exit();
         }
 
+        /// <summary>
+        /// On loading of the stream page set the title for the movie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Stream_Load(object sender, EventArgs e)
         {
             titleLabel.Text = title;
         }
 
         /// <summary>
-        /// 
+        /// Shows control interface and movie info on user moving the mouse
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -58,7 +63,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// 
+        /// Hides the control interface after set interval and disables itself until user moves mouse again
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -93,6 +98,11 @@ namespace Assignment_3
             Application.Run(movieSelection);
         }
 
+        /// <summary>
+        /// Initializes the info for the stream
+        /// </summary>
+        /// <param name="movieInfo"></param>
+        /// <param name="purchasedMovies"></param>
         public void initialize(String[] movieInfo, List<String> purchasedMovies)
         {
             this.title = movieInfo[0];

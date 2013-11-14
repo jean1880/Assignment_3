@@ -20,6 +20,9 @@ namespace Assignment_3
 
         #region Assembly Attribute Accessors
 
+        /// <summary>
+        /// Constructs the title of the project gathered from project properties
+        /// </summary>
         public string AssemblyTitle
         {
             get
@@ -28,7 +31,7 @@ namespace Assignment_3
                 if (attributes.Length > 0)
                 {
                     AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
+                    if (!String.IsNullOrEmpty(titleAttribute.Title))
                     {
                         return titleAttribute.Title;
                     }
@@ -37,6 +40,9 @@ namespace Assignment_3
             }
         }
 
+        /// <summary>
+        /// Constructs the version of the project gathered from project properties
+        /// </summary>
         public string AssemblyVersion
         {
             get
@@ -45,6 +51,9 @@ namespace Assignment_3
             }
         }
 
+        /// <summary>
+        /// Constructs the description of the project gathered from project properties
+        /// </summary>
         public string AssemblyDescription
         {
             get
@@ -58,6 +67,9 @@ namespace Assignment_3
             }
         }
 
+        /// <summary>
+        /// Constructs the product name of the project gathered from project properties
+        /// </summary>
         public string AssemblyProduct
         {
             get
@@ -71,6 +83,9 @@ namespace Assignment_3
             }
         }
 
+        /// <summary>
+        /// Constructs the copyright info of the project gathered from project properties
+        /// </summary>
         public string AssemblyCopyright
         {
             get
@@ -84,6 +99,9 @@ namespace Assignment_3
             }
         }
 
+        /// <summary>
+        /// Constructs the company name of the project gathered from project properties
+        /// </summary>
         public string AssemblyCompany
         {
             get

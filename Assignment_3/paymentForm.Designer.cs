@@ -185,7 +185,7 @@
             this.expiryDate.Name = "expiryDate";
             this.expiryDate.Size = new System.Drawing.Size(70, 26);
             this.expiryDate.TabIndex = 26;
-            this.expiryDate.Value = new System.DateTime(2013, 11, 12, 0, 0, 0, 0);
+            this.expiryDate.Value = new System.DateTime(2013, 11, 13, 0, 0, 0, 0);
             // 
             // cancelButton
             // 

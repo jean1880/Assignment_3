@@ -61,13 +61,11 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// 
+        /// Passes selected movie info into the form
         /// </summary>
-        /// <param name="title"></param>
-        /// <param name="genre"></param>
-        /// <param name="cost"></param>
-        /// <param name="description"></param>
-        /// <param name="image"></param>
+        /// <param name="tempVar">Variable stores the string array of movie information</param>
+        /// <param name="cost">Cost of the selected movie</param>
+        /// <param name="image">Image for the movie</param>
         public void passSelection(String[] tempVar, decimal cost, Image image)
         {
             decimal taxTotal; // Variable to store calculated tax
@@ -132,18 +130,21 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void check_Payment(object sender, EventArgs e)
         {
-            if (payment_form.checkSuccess())
+            if (payment_form.checkSuccess()) // if payment is processed wipe current payment form, and recreate as new form and enable stream
             {
                 CreatePurchaseForm();
-                purchasedMovies.Add(this.title);
-                streamButton.Enabled = true;        
+                purchasedMovies.Add(this.title); // add the purchased movie to the purchased list
+                streamButton.Enabled = true;
+                streamToolStripMenuItem.Enabled = true;
             }
-            else if (checkMoviePurchased())
+            else if (checkMoviePurchased()) // if movie is already purchased allow stream
             {
                 streamButton.Enabled = true;
+                streamToolStripMenuItem.Enabled = true;
             }
-            else
+            else // movie is not paid for keep streaming option disabled
             {
+                streamToolStripMenuItem.Enabled = false;
                 streamButton.Enabled = false;   
             }
         }
@@ -166,16 +167,27 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void streamButton_Click(object sender, EventArgs e)
         {
-            movieStream.initialize(new String[] { title, description, genre }, purchasedMovies);
-            movieStream.Show();
-            this.Hide();
+            if (checkMoviePurchased()) // verify movie is payed for
+            {
+                movieStream.initialize(new String[] { title, description, genre }, purchasedMovies); // sets movie info
+                movieStream.Show(); // open the movie stream
+                this.Hide();
+            }
         }
 
+        /// <summary>
+        /// Sets the movies the user has already purchased
+        /// </summary>
+        /// <param name="purchasedMovies"></param>
         public void setPurchasedMovies(List<String> purchasedMovies)
         {
             this.purchasedMovies = purchasedMovies;
         }
 
+        /// <summary>
+        /// Checks whether the current movie has been purchased already
+        /// </summary>
+        /// <returns></returns>
         private Boolean checkMoviePurchased()
         {
             if (purchasedMovies != null && purchasedMovies.Contains(title))
@@ -183,6 +195,26 @@ namespace Assignment_3
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Prints the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printForm.Print();
+        }
+
+        /// <summary>
+        /// starts stream if available
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void streamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            streamButton_Click(sender, e);
         }
     }
 }

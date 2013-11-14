@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.backButton = new System.Windows.Forms.Button();
             this.moviePicture = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.streamButton = new System.Windows.Forms.Button();
+            this.printForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.moviePicture)).BeginInit();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -199,19 +201,21 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.streamToolStripMenuItem.Text = "Stream";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.streamToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cancelToolStripMenuItem.Text = "Cancel";
             // 
             // helpToolStripMenuItem
@@ -239,6 +243,14 @@
             this.streamButton.Text = "&Stream";
             this.streamButton.UseVisualStyleBackColor = true;
             this.streamButton.Click += new System.EventHandler(this.streamButton_Click);
+            // 
+            // printForm
+            // 
+            this.printForm.DocumentName = "document";
+            this.printForm.Form = this;
+            this.printForm.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
+            this.printForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("printForm.PrinterSettings")));
+            this.printForm.PrintFileName = null;
             // 
             // OrderForm
             // 
@@ -296,5 +308,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button streamButton;
+        private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm printForm;
     }
 }

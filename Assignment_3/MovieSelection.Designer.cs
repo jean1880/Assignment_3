@@ -45,6 +45,7 @@
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePicture)).BeginInit();
             this.mainMenu.SuspendLayout();
@@ -173,6 +174,7 @@
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
@@ -196,6 +198,14 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // printForm
+            // 
+            this.printForm.DocumentName = "document";
+            this.printForm.Form = this;
+            this.printForm.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
+            this.printForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("printForm.PrinterSettings")));
+            this.printForm.PrintFileName = null;
+            // 
             // MovieSelection
             // 
             this.AcceptButton = this.nextButton;
@@ -215,7 +225,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_Closing);
-            this.Load += new System.EventHandler(this.MovieSelection_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePicture)).EndInit();
@@ -243,6 +252,7 @@
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm printForm;
     }
 }
 

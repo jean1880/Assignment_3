@@ -116,15 +116,6 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// On loading of the form, set timer for splash screen close and hide this form until splash screen is closed
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MovieSelection_Load(object sender, EventArgs e)
-        {
-        }
-
-        /// <summary>
         /// On movie selection update labels and movie image
         /// </summary>
         /// <param name="sender"></param>
@@ -225,6 +216,16 @@ namespace Assignment_3
         private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        /// <summary>
+        /// Prints the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printForm.Print();
         }
     }
 }
