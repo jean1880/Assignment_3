@@ -51,7 +51,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// Main constructor takes the splash screen and next form in construction for preperation of display
+        /// Main constructor takes the splash screen and next form in construction for preparation of display
         /// </summary>
         /// <param name="splashScreen"></param>
         /// <param name="orderForm"></param>
@@ -116,7 +116,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// On movie selection update labels and movie image
+        /// On change in movie selection update labels and movie image
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -153,7 +153,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// Ticker to cloase the splash screen
+        /// Ticker to close the splash screen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -166,7 +166,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// Loads the next form
+        /// Loads the next form when the user clicks next button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

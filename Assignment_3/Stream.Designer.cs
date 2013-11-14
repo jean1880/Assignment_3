@@ -95,8 +95,10 @@
             this.Controls.Add(this.backControl);
             this.Controls.Add(this.movieBox);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Stream";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bananza!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_closing);
             this.Load += new System.EventHandler(this.Stream_Load);

@@ -48,11 +48,11 @@ namespace Assignment_3
         /// <param name="e"></param>
         private void form_closing(object sender, FormClosingEventArgs e)
         {
-            cancel_click(sender, e);
+            Application.Exit();
         }
 
         /// <summary>
-        /// This method stores the form that called this form so that it can be reopened on completion
+        /// This method stores the form that called this order form so that it can be reopened on completion
         /// </summary>
         /// <param name="prevForm">Variable to store the form that called this form</param>
         public void passForm(OrderForm prevForm)
@@ -70,7 +70,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// Checks that credit information provided is valid, if it passes opens the previous form, and sets succes variable to true
+        /// Checks that credit information provided is valid, if it passes opens the previous form, and sets success variable to true
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -112,7 +112,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// When payment option is chosen update the payment type picture, and the regular expression for theat type
+        /// When payment option is chosen update the payment type picture, and the regular expression for that type
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -136,13 +136,14 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// Exits the application upon user cancel
+        /// Closes payment window and returns the user to the order form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void cancel_click(object sender, EventArgs e)
         {
-            Application.Exit();
+            prevForm.Show();
+            this.Hide();
         }
     }
 

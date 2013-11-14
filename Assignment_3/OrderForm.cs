@@ -52,7 +52,7 @@ namespace Assignment_3
         }
         
         /// <summary>
-        /// 
+        /// Passes movieSelection form into this form to control
         /// </summary>
         /// <param name="movieSelection"></param>
         public void passForm(MovieSelection movieSelection)
@@ -61,7 +61,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// Passes selected movie info into the form
+        /// Passes selected movie info into this form, and updates displays for the user
         /// </summary>
         /// <param name="tempVar">Variable stores the string array of movie information</param>
         /// <param name="cost">Cost of the selected movie</param>
@@ -124,7 +124,7 @@ namespace Assignment_3
         }
 
         /// <summary>
-        /// opens movie stream if payment was succesful
+        /// Enables movie stream if payment was succesful
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
